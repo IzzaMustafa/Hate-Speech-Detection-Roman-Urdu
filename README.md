@@ -8,7 +8,7 @@ This project was developed as part of the **Machine Learning (CS284)** course. T
 
 ## Author
 
-**Ahtisham Ul Haq (49)**  
+**Izza Mustafa (24)**  
 Machine Learning Course - Semester Project
 
 ## Team Repository
