@@ -14,7 +14,7 @@ Machine Learning Course - Semester Project
 ## Team Repository
 
 This is my personal copy of the team project. The original team repository is maintained by Saifullah Umar:
-- https://github.com/SaifUllahUmar0317/roman-urdu-hate-speech
+- https://github.com/SaifUllahUmar0317/Hate_Speech_detection_Roman_Urdu
 
 ## My Contributions
 
