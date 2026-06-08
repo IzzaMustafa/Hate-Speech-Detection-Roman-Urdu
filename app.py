@@ -371,6 +371,7 @@ with tab1:
             with example_cols[idx % 4]:
                 if st.button(label, key=f"ex_{idx}", width="stretch"):
                     st.session_state.current_text = text
+                    st.rerun()
         
         # Main text input
         if 'current_text' not in st.session_state:
