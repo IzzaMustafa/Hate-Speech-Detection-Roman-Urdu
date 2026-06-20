@@ -367,22 +367,22 @@ with tab1:
             "🚫 Another Hate": "Dafa ho jao, badtameez"  # Will be classified as HATE
         }
         
+        # Initialize session state
+        if "main_input" not in st.session_state:
+            st.session_state.main_input = ""
+        
+        # Example buttons
         for idx, (label, text) in enumerate(examples.items()):
             with example_cols[idx % 4]:
-                if st.button(label, key=f"ex_{idx}", use_container_width=True):
-                    st.session_state.current_text = text
-                    st.rerun()
+                if st.button(label, key=f"ex_{idx}", width="stretch"):
+                    st.session_state.main_input = text
         
-        # Main text input
-        if 'current_text' not in st.session_state:
-            st.session_state.current_text = ""
-        
+        # Text area
         user_input = st.text_area(
             "**Type or paste Roman Urdu text:**",
-            value=st.session_state.current_text,
-            placeholder="Example: Tum bohat bure ho, tumhari soch kharab hai...",
             height=150,
-            key="main_input"
+            key="main_input",
+            placeholder="Example: Tum bohat bure ho, tumhari soch kharab hai..."
         )
         
         # Analysis options
@@ -392,7 +392,7 @@ with tab1:
         with col_b:
             clear_btn = st.button("🗑️ Clear", use_container_width=True)
             if clear_btn:
-                st.session_state.current_text = ""
+                st.session_state.main_input = ""
                 st.rerun()
         
         if analyze_btn and user_input.strip():
